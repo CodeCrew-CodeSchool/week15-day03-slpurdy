@@ -1,0 +1,15 @@
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\bin\Debug\net8.0\MyApp.exe
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\bin\Debug\net8.0\MyApp.deps.json
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\bin\Debug\net8.0\MyApp.runtimeconfig.json
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\bin\Debug\net8.0\MyApp.dll
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\bin\Debug\net8.0\MyApp.pdb
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\MyApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\MyApp.AssemblyInfoInputs.cache
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\MyApp.AssemblyInfo.cs
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\MyApp.csproj.CoreCompileInputs.cache
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\MyApp.sourcelink.json
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\MyApp.dll
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\refint\MyApp.dll
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\MyApp.pdb
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\MyApp.genruntimeconfig.cache
+C:\Users\Student-29\Documents\DEV\week15-day03-slpurdy\MyApp\obj\Debug\net8.0\ref\MyApp.dll
