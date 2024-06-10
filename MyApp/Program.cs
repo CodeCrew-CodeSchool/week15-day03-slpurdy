@@ -22,6 +22,7 @@ namespace tictactoe
             Console.ReadLine();
             Console.Clear();
 
+            // Initialize the game board
             string[][] gameBoard = new string[][]
             {
                 new string[] { "1", "2", "3" },
@@ -32,13 +33,17 @@ namespace tictactoe
             Player player1 = new Player { id = "1", marker = "X" };
             Player player2 = new Player { id = "2", marker = "O" };
 
+            // Set the current player to player 1
             Player currentPlayer = player1;
             bool gameOver = false;
+
+        
             while (!gameOver)
             {
                 Console.WriteLine("My Purdy Tic Tac Toe\n");
                 DisplayBoard(gameBoard);
 
+                // Prompt current player to make a move
                 Console.WriteLine($"\nPlayer {currentPlayer.id}. Make a move!");
                 string playerChoice = Console.ReadLine();
                 try
@@ -47,12 +52,14 @@ namespace tictactoe
                 }
                 catch (Exception ex)
                 {
+                    // Display error message if spot is already taken
                     Console.WriteLine(ex.Message);
                     continue;
                 }
 
                 Console.Clear();
 
+                // Check for a winner
                 if (CheckForWinner(gameBoard))
                 {
                     Console.WriteLine($"Player {currentPlayer.id} wins!");
@@ -67,6 +74,7 @@ namespace tictactoe
             }
         }
 
+        // display the game board
         static void DisplayBoard(string[][] board)
         {
             for (int i = 0; i < board.Length; i++)
@@ -81,82 +89,63 @@ namespace tictactoe
             }
         }
 
+        //  mark the board 
         static void MarkBoard(string playerChoice, Player currentPlayer, string[][] gameBoard)
         {
-            if (playerChoice == "1")
+            // Check and mark the chosen position
+            switch (playerChoice)
             {
-                if (gameBoard[0][0] == "X" || gameBoard[0][0] == "O")
-                {
-                    throw new Exception("Spot is already taken");
-                }
-                gameBoard[0][0] = currentPlayer.marker;
-            }
-            else if (playerChoice == "2")
-            {
-                if (gameBoard[0][1] == "X" || gameBoard[0][1] == "O")
-                {
-                    throw new Exception("Spot is already taken");
-                }
-                gameBoard[0][1] = currentPlayer.marker;
-            }
-            else if (playerChoice == "3")
-            {
-                if (gameBoard[0][2] == "X" || gameBoard[0][2] == "O")
-                {
-                    throw new Exception("Spot is already taken");
-                }
-                gameBoard[0][2] = currentPlayer.marker;
-            }
-            else if (playerChoice == "4")
-            {
-                if (gameBoard[1][0] == "X" || gameBoard[1][0] == "O")
-                {
-                    throw new Exception("Spot is already taken");
-                }
-                gameBoard[1][0] = currentPlayer.marker;
-            }
-            else if (playerChoice == "5")
-            {
-                if (gameBoard[1][1] == "X" || gameBoard[1][1] == "O")
-                {
-                    throw new Exception("Spot is already taken");
-                }
-                gameBoard[1][1] = currentPlayer.marker;
-            }
-            else if (playerChoice == "6")
-            {
-                if (gameBoard[1][2] == "X" || gameBoard[1][2] == "O")
-                {
-                    throw new Exception("Spot is already taken");
-                }
-                gameBoard[1][2] = currentPlayer.marker;
-            }
-            else if (playerChoice == "7")
-            {
-                if (gameBoard[2][0] == "X" || gameBoard[2][0] == "O")
-                {
-                    throw new Exception("Spot is already taken");
-                }
-                gameBoard[2][0] = currentPlayer.marker;
-            }
-            else if (playerChoice == "8")
-            {
-                if (gameBoard[2][1] == "X" || gameBoard[2][1] == "O")
-                {
-                    throw new Exception("Spot is already taken");
-                }
-                gameBoard[2][1] = currentPlayer.marker;
-            }
-            else if (playerChoice == "9")
-            {
-                if (gameBoard[2][2] == "X" || gameBoard[2][2] == "O")
-                {
-                    throw new Exception("Spot is already taken");
-                }
-                gameBoard[2][2] = currentPlayer.marker;
+                case "1":
+                    if (gameBoard[0][0] == "X" || gameBoard[0][0] == "O")
+                        throw new Exception("Spot is already taken");
+                    gameBoard[0][0] = currentPlayer.marker;
+                    break;
+                case "2":
+                    if (gameBoard[0][1] == "X" || gameBoard[0][1] == "O")
+                        throw new Exception("Spot is already taken");
+                    gameBoard[0][1] = currentPlayer.marker;
+                    break;
+                case "3":
+                    if (gameBoard[0][2] == "X" || gameBoard[0][2] == "O")
+                        throw new Exception("Spot is already taken");
+                    gameBoard[0][2] = currentPlayer.marker;
+                    break;
+                case "4":
+                    if (gameBoard[1][0] == "X" || gameBoard[1][0] == "O")
+                        throw new Exception("Spot is already taken");
+                    gameBoard[1][0] = currentPlayer.marker;
+                    break;
+                case "5":
+                    if (gameBoard[1][1] == "X" || gameBoard[1][1] == "O")
+                        throw new Exception("Spot is already taken");
+                    gameBoard[1][1] = currentPlayer.marker;
+                    break;
+                case "6":
+                    if (gameBoard[1][2] == "X" || gameBoard[1][2] == "O")
+                        throw new Exception("Spot is already taken");
+                    gameBoard[1][2] = currentPlayer.marker;
+                    break;
+                case "7":
+                    if (gameBoard[2][0] == "X" || gameBoard[2][0] == "O")
+                        throw new Exception("Spot is already taken");
+                    gameBoard[2][0] = currentPlayer.marker;
+                    break;
+                case "8":
+                    if (gameBoard[2][1] == "X" || gameBoard[2][1] == "O")
+                        throw new Exception("Spot is already taken");
+                    gameBoard[2][1] = currentPlayer.marker;
+                    break;
+                case "9":
+                    if (gameBoard[2][2] == "X" || gameBoard[2][2] == "O")
+                        throw new Exception("Spot is already taken");
+                    gameBoard[2][2] = currentPlayer.marker;
+                    break;
+                default:
+                    throw new Exception("Invalid choice");
             }
         }
 
+        // check if there is a winner
         static bool CheckForWinner(string[][] board)
         {
             // Check rows
